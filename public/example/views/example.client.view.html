@@ -1,0 +1,13 @@
+<section ng-controller="ExampleController" data-ng-init="find()">
+  <input type=text id=text1 ng-model=name>
+  <input type=text id=text2 ng-model=name>
+  <ol>
+  <li data-ng-repeat="repo in repos">
+    <a data-ng-href="#!/articles/{{repo._id}}" data-ng-bind="repo.name"></a>
+    <br>
+    <small data-ng-bind="repo.html_url | date:'medium'"></small>
+    <small>/</small>
+    <small data-ng-bind="repo.owner.username"></small>
+    <p data-ng-bind="repo.id"></p>
+  </li></ol>
+</section>
