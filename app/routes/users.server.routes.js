@@ -3,6 +3,7 @@
 var users = require('../../app/controllers/users.server.controller'),
     passport = require('passport');
 module.exports = function(app) {
+    app.get('/signout',users.signout)
     app.get('/oauth/github',
         passport.authenticate('oauth2', {
             scope: 'repo'
@@ -13,11 +14,13 @@ module.exports = function(app) {
         successRedirect: '/'
     }));
     app.route('/users')
-        .get(users.listUsers);
+        .get(users.requiresLogin,users.read);
     app.route('/user/:userId')
-        .get(users.read)
+        .get(users.requiresLogin,users.read)
         .delete(users.delete);
     app.route('/user/:userId/starred')
-        .get(users.listStarred);
-    app.param('userId', users.userByID);
+        .get(users.requiresLogin,users.listStarred);
+    app.route('/user/:userId/updatestarred')
+        .get(users.requiresLogin,users.updateStarred);
+    app.param('userId', users.userByUsername);
 };

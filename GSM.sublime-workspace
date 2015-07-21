@@ -4,20 +4,100 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-family"
+			],
+			[
+				"con",
+				"controls"
+			],
+			[
+				"se",
+				"section	Tag"
+			],
+			[
+				"pr",
+				"profile"
+			],
+			[
+				"req",
+				"request〔variable〕"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"pro",
+				"profile〔argument〕"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"hei",
+				"line-height"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"on",
+				"onclick	Attr"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"lin",
+				"link	Tag"
+			],
+			[
+				"hea",
+				"header	Tag"
+			],
+			[
+				"fun",
+				"function〔keyword〕"
+			],
+			[
 				"use",
 				"username"
 			],
 			[
-				"te",
-				"textarea	Tag"
-			],
-			[
 				"re",
 				"return"
-			],
-			[
-				"pro",
-				"promise"
 			],
 			[
 				"ht",
@@ -26,10 +106,6 @@
 			[
 				"us",
 				"username"
-			],
-			[
-				"fun",
-				"fun	Function"
 			],
 			[
 				"ca",
@@ -46,10 +122,6 @@
 			[
 				"ne",
 				"next"
-			],
-			[
-				"user",
-				"userId"
 			],
 			[
 				"id",
@@ -76,10 +148,6 @@
 				"String"
 			],
 			[
-				"mar",
-				"margin"
-			],
-			[
 				"city",
 				"citylist"
 			],
@@ -94,10 +162,6 @@
 			[
 				"els",
 				"else〔keyword〕"
-			],
-			[
-				"margin",
-				"margin-left"
 			],
 			[
 				"in",
@@ -116,10 +180,6 @@
 				"div	Tag"
 			],
 			[
-				"col",
-				"background-color"
-			],
-			[
 				"mik",
 				"miktex"
 			],
@@ -132,10 +192,6 @@
 				"color"
 			],
 			[
-				"font",
-				"font-family"
-			],
-			[
 				"l",
 				"li	Tag"
 			]
@@ -143,54 +199,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/views/index.ejs",
-			"settings":
-			{
-				"buffer_size": 1224,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/index.server.controller.js",
-			"settings":
-			{
-				"buffer_size": 297,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/example/controllers/example.client.controller.js",
-			"settings":
-			{
-				"buffer_size": 1120,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/example/services/example.client.service.js",
-			"settings":
-			{
-				"buffer_size": 379,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/F/3285OS_08_01/public/articles/controllers/articles.client.controller.js",
-			"settings":
-			{
-				"buffer_size": 3301,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/routes/users.server.routes.js",
-			"settings":
-			{
-				"buffer_size": 734,
-				"line_ending": "Windows"
-			}
-		},
 		{
 			"file": "public/application.js",
 			"settings":
@@ -200,10 +208,10 @@
 			}
 		},
 		{
-			"file": "public/example/config/example.client.routes.js",
+			"file": "public/example/controllers/example.client.controller.js",
 			"settings":
 			{
-				"buffer_size": 275,
+				"buffer_size": 369,
 				"line_ending": "Windows"
 			}
 		},
@@ -211,27 +219,57 @@
 			"file": "public/example/views/example.client.view.html",
 			"settings":
 			{
-				"buffer_size": 483,
-				"line_ending": "Windows",
-				"name": "<section>"
+				"buffer_size": 1270,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "bower.json",
+			"file": "app/routes/users.server.routes.js",
 			"settings":
 			{
-				"buffer_size": 172,
-				"line_ending": "Windows",
-				"name": "{"
+				"buffer_size": 911,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": ".bowerrc",
+			"file": "app/controllers/users.server.controller.js",
 			"settings":
 			{
-				"buffer_size": 30,
+				"buffer_size": 5386,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/routes/index.server.routes.js",
+			"settings":
+			{
+				"buffer_size": 185,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/index.server.controller.js",
+			"settings":
+			{
+				"buffer_size": 453,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/models/user.server.model.js",
+			"settings":
+			{
+				"buffer_size": 1732,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[{\n        \"default_branch\": \"master\",\n        \"watchers\": 1623,\n        \"open_issues\": 142,\n        \"forks\": 509,\n        \"open_issues_count\": 142,\n        \"mirror_url\": null,\n        \"forks_count\": 509,\n        \"has_pages\": true,\n        \"has_wiki\": true,\n        \"has_downloads\": true,\n        \"has_issues\": true,\n        \"language\": \"JavaScript\",\n        \"watchers_count\": 1623,\n        \"stargazers_count\": 1623,\n        \"size\": 5106,\n        \"homepage\": \"http://ng-table.com/\",\n        \"svn_url\": \"https://github.com/esvit/ng-table\",\n        \"clone_url\": \"https://github.com/esvit/ng-table.git\",\n        \"ssh_url\": \"git@github.com:esvit/ng-table.git\",\n        \"git_url\": \"git://github.com/esvit/ng-table.git\",\n        \"pushed_at\": \"2015-07-13T13:22:00Z\",\n        \"updated_at\": \"2015-07-14T06:51:26Z\",\n        \"created_at\": \"2013-04-19T09:46:25Z\",\n        \"releases_url\": \"https://api.github.com/repos/esvit/ng-table/releases{/id}\",\n        \"labels_url\": \"https://api.github.com/repos/esvit/ng-table/labels{/name}\",\n        \"notifications_url\": \"https://api.github.com/repos/esvit/ng-table/notifications{?since,all,participating}\",\n        \"milestones_url\": \"https://api.github.com/repos/esvit/ng-table/milestones{/number}\",\n        \"pulls_url\": \"https://api.github.com/repos/esvit/ng-table/pulls{/number}\",\n        \"issues_url\": \"https://api.github.com/repos/esvit/ng-table/issues{/number}\",\n        \"downloads_url\": \"https://api.github.com/repos/esvit/ng-table/downloads\",\n        \"archive_url\": \"https://api.github.com/repos/esvit/ng-table/{archive_format}{/ref}\",\n        \"merges_url\": \"https://api.github.com/repos/esvit/ng-table/merges\",\n        \"compare_url\": \"https://api.github.com/repos/esvit/ng-table/compare/{base}...{head}\",\n        \"contents_url\": \"https://api.github.com/repos/esvit/ng-table/contents/{+path}\",\n        \"issue_comment_url\": \"https://api.github.com/repos/esvit/ng-table/issues/comments{/number}\",\n        \"comments_url\": \"https://api.github.com/repos/esvit/ng-table/comments{/number}\",\n        \"git_commits_url\": \"https://api.github.com/repos/esvit/ng-table/git/commits{/sha}\",\n        \"commits_url\": \"https://api.github.com/repos/esvit/ng-table/commits{/sha}\",\n        \"subscription_url\": \"https://api.github.com/repos/esvit/ng-table/subscription\",\n        \"subscribers_url\": \"https://api.github.com/repos/esvit/ng-table/subscribers\",\n        \"contributors_url\": \"https://api.github.com/repos/esvit/ng-table/contributors\",\n        \"stargazers_url\": \"https://api.github.com/repos/esvit/ng-table/stargazers\",\n        \"languages_url\": \"https://api.github.com/repos/esvit/ng-table/languages\",\n        \"statuses_url\": \"https://api.github.com/repos/esvit/ng-table/statuses/{sha}\",\n        \"trees_url\": \"https://api.github.com/repos/esvit/ng-table/git/trees{/sha}\",\n        \"git_refs_url\": \"https://api.github.com/repos/esvit/ng-table/git/refs{/sha}\",\n        \"git_tags_url\": \"https://api.github.com/repos/esvit/ng-table/git/tags{/sha}\",\n        \"blobs_url\": \"https://api.github.com/repos/esvit/ng-table/git/blobs{/sha}\",\n        \"tags_url\": \"https://api.github.com/repos/esvit/ng-table/tags\",\n        \"branches_url\": \"https://api.github.com/repos/esvit/ng-table/branches{/branch}\",\n        \"assignees_url\": \"https://api.github.com/repos/esvit/ng-table/assignees{/user}\",\n        \"events_url\": \"https://api.github.com/repos/esvit/ng-table/events\",\n        \"issue_events_url\": \"https://api.github.com/repos/esvit/ng-table/issues/events{/number}\",\n        \"hooks_url\": \"https://api.github.com/repos/esvit/ng-table/hooks\",\n        \"teams_url\": \"https://api.github.com/repos/esvit/ng-table/teams\",\n        \"collaborators_url\": \"https://api.github.com/repos/esvit/ng-table/collaborators{/collaborator}\",\n        \"keys_url\": \"https://api.github.com/repos/esvit/ng-table/keys{/key_id}\",\n        \"forks_url\": \"https://api.github.com/repos/esvit/ng-table/forks\",\n        \"url\": \"https://api.github.com/repos/esvit/ng-table\",\n        \"fork\": false,\n        \"description\": \"Simple table with sorting and filtering on AngularJS\",\n        \"html_url\": \"https://github.com/esvit/ng-table\",\n        \"private\": false,\n        \"owner\": {\n            \"site_admin\": false,\n            \"type\": \"User\",\n            \"received_events_url\": \"https://api.github.com/users/esvit/received_events\",\n            \"events_url\": \"https://api.github.com/users/esvit/events{/privacy}\",\n            \"repos_url\": \"https://api.github.com/users/esvit/repos\",\n            \"organizations_url\": \"https://api.github.com/users/esvit/orgs\",\n            \"subscriptions_url\": \"https://api.github.com/users/esvit/subscriptions\",\n            \"starred_url\": \"https://api.github.com/users/esvit/starred{/owner}{/repo}\",\n            \"gists_url\": \"https://api.github.com/users/esvit/gists{/gist_id}\",\n            \"following_url\": \"https://api.github.com/users/esvit/following{/other_user}\",\n            \"followers_url\": \"https://api.github.com/users/esvit/followers\",\n            \"html_url\": \"https://github.com/esvit\",\n            \"url\": \"https://api.github.com/users/esvit\",\n            \"gravatar_id\": \"\",\n            \"avatar_url\": \"https://avatars.githubusercontent.com/u/1222467?v=3\",\n            \"id\": 1222467,\n            \"login\": \"esvit\"\n        },\n        \"full_name\": \"esvit/ng-table\",\n        \"name\": \"ng-table\",\n        \"id\": 9542455\n    },\n",
+			"settings":
+			{
+				"buffer_size": 5327,
 				"line_ending": "Windows",
-				"name": "{"
+				"name": "[{"
 			}
 		}
 	],
@@ -243,9 +281,17 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "ang",
+		"last_filter": "ja",
 		"selected_items":
 		[
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set h",
+				"Set Syntax: HTML (Rails)"
+			],
 			[
 				"ang",
 				"AngularJS: Toggle - Enable data- Prefix"
@@ -359,10 +405,6 @@
 				"Set Syntax: JSON"
 			],
 			[
-				"set h",
-				"Set Syntax: HTML (Rails)"
-			],
-			[
 				"sethtm",
 				"Set Syntax: HTML (Rails)"
 			],
@@ -471,6 +513,8 @@
 		"/F/githubstar/app/routes",
 		"/F/githubstar/app/views",
 		"/F/githubstar/config",
+		"/F/githubstar/config/env",
+		"/F/githubstar/config/strategies",
 		"/F/githubstar/public",
 		"/F/githubstar/public/example",
 		"/F/githubstar/public/example/config",
@@ -482,21 +526,66 @@
 	],
 	"file_history":
 	[
+		"/F/githubstar/app/controllers/users.server.controller.js",
+		"/C/Users/Jianqiang/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/Users/Jianqiang/Desktop/Desktop/topic_3.html",
+		"/C/Users/Jianqiang/Desktop/Desktop/topic_3.css",
+		"/C/Users/Jianqiang/Desktop/lol.php",
+		"/F/githubstar/bower.json",
+		"/F/githubstar/public/lib/ui-grid/ui-grid-unstable.css",
+		"/F/githubstar/public/lib/ui-grid/ui-grid-unstable.js",
+		"/F/githubstar/app/views/index.ejs",
+		"/C/Users/Jianqiang/Desktop/topic_3.html",
+		"/C/Users/Jianqiang/Desktop/topic_3.css",
+		"/C/Users/Jianqiang/Downloads/appointCoach/page/20150627/topic_3.html",
+		"/C/Users/Jianqiang/AppData/Roaming/.emacs.d/init.el",
+		"/C/Users/Jianqiang/Downloads/emacs.d-master/lisp/init-locales.el",
+		"/C/Users/Jianqiang/AppData/Roaming/.emacs.d/lisp/init-elpa.el",
+		"/F/githubstar/public/example/controllers/example.client.controller.js",
+		"/F/githubstar/public/example/views/example.client.view.html",
+		"/F/githubstar/app/controllers/index.server.controller.js",
+		"/F/githubstar/app/routes/index.server.routes.js",
+		"/C/Users/Jianqiang/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/F/githubstar/public/application.js",
+		"/C/Users/Jianqiang/AppData/Roaming/.emacs",
+		"/F/githubstar/app/views/table.ejs",
+		"/C/Users/Jianqiang/Desktop/1.py",
+		"/F/githubstar/public/example/views/app.js",
+		"/D/emacs/.emacs.d/init.el",
+		"/C/Users/Jianqiang/Desktop/1.org",
+		"/F/githubstar/server.js",
+		"/F/githubstar/config/env/development.js",
+		"/F/db/log.txt",
+		"/C/Users/Jianqiang/Desktop/新建文件夹/index.html",
+		"/F/githubstar/public/example/services/example.client.service.js",
+		"/F/githubstar/app/routes/users.server.routes.js",
+		"/F/动脉365/index.html",
+		"/F/动脉365/style.css",
+		"/C/Users/Jianqiang/Downloads/appointCoach/css/20150609/index.css",
+		"/C/Users/Jianqiang/Desktop/分享h5 测量图",
+		"/F/new1/header.php",
+		"/C/Users/Jianqiang/Downloads/appointCoach/page/20150609/index.html",
+		"/F/new1/style.css",
+		"/F/githubstar/package.json",
+		"/F/githubstar/config/strategies/github.js",
+		"/D/emacs/bin/.emacs.d/init.el",
+		"/C/Users/Jianqiang/AppData/Roaming/SumatraPDF/SumatraPDF-settings.txt",
+		"/C/Users/Jianqiang/AppData/Local/Temp/scp27652/home/wwwroot/node.lujq.me/web/public/example/services/example.client.service.js",
+		"/C/Users/Jianqiang/AppData/Local/Temp/scp21301/home/wwwroot/node.lujq.me/web/config/env/development.js",
+		"/F/githubstar/.gitignore",
+		"/F/githubstar/.bowerrc",
+		"/F/githubstar/public/example/config/example.client.routes.js",
+		"/F/3285OS_08_01/public/articles/controllers/articles.client.controller.js",
 		"/F/githubstar/public/example/example.client.module.js",
 		"/F/githubstar/public/example/controllers/articles.client.controller.js",
-		"/F/githubstar/app/controllers/index.server.controller.js",
 		"/F/githubstar/public/users/users.client.module.js",
 		"/F/githubstar/public/users/services/authentication.client.service.js",
-		"/F/githubstar/app/routes/users.server.routes.js",
 		"/F/3285OS_07_01/app/routes/users.server.routes.js",
-		"/F/githubstar/public/application.js",
 		"/C/Users/Jianqiang/Downloads/mean-web-development-master/Chapter 7/3285OS_07_01/app/routes/users.server.routes.js",
 		"/C/Users/Jianqiang/Downloads/mean-web-development-master/Chapter 7/3285OS_07_01/app/routes/index.server.routes.js",
 		"/F/3285OS_07_01/app/routes/index.server.routes.js",
-		"/F/githubstar/app/routes/index.server.routes.js",
 		"/F/githubstar/config/express.js",
 		"/F/githubstar/public/main/main.js",
-		"/F/githubstar/app/views/index.ejs",
 		"/C/Users/Jianqiang/AppData/Local/Temp/scp38991/home/wwwroot/sdjhlaw.com/web/index.php",
 		"/C/Users/Jianqiang/AppData/Local/Temp/scp38403/home/wwwroot/sdjhlaw.com/web/user17.php",
 		"/F/githubstar/public/main/show-properties.js",
@@ -505,10 +594,6 @@
 		"/F/3285OS_08_01/public/application.js",
 		"/F/3285OS_08_01/app/views/index.ejs",
 		"/F/3285OS_08_01/server.js",
-		"/F/githubstar/package.json",
-		"/F/githubstar/server.js",
-		"/F/githubstar/bower.json",
-		"/F/githubstar/.bowerrc",
 		"/F/githubstar/app.ts",
 		"/C/Users/Jianqiang/.ssh/github_rsa.pub",
 		"/C/Users/Jianqiang/.ssh/id_rsa.pub",
@@ -516,9 +601,6 @@
 		"/C/Users/Jianqiang/Downloads/bootstrap-table-master/bootstrap-table.jquery.json",
 		"/C/Users/Jianqiang/Downloads/bootstrap-table-master/index.html",
 		"/C/Users/Jianqiang/Desktop/dortmun.csv",
-		"/F/githubstar/config/strategies/github.js",
-		"/F/githubstar/app/controllers/users.server.controller.js",
-		"/F/githubstar/config/env/development.js",
 		"/F/githubstar/app/models/user.server.model.js",
 		"/F/droplet.php",
 		"/C/Users/Jianqiang/Downloads/gapps-lp-20150222-signed/install-optional.sh",
@@ -571,45 +653,7 @@
 		"/C/Users/Jianqiang/Downloads/passport-github-master/examples/login/node_modules/express/Readme.md",
 		"/F/githubstar/node_modules/passport-oauth2/node_modules/oauth/tests/oauth2.js",
 		"/F/githubstar/node_modules/passport-oauth2/node_modules/oauth/examples/github-example.js",
-		"/F/66666/config/env/development.js",
-		"/C/Users/Jianqiang/AppData/Local/Temp/scp26590/home/wwwroot/node.lujq.me/web/package.json",
-		"/F/test/package.json",
-		"/F/test/server.js",
-		"/F/test/server",
-		"/F/githubstar/config/env/production.js",
-		"/F/githubstar/config/strategies/google.js",
-		"/F/githubstar/app/views/signin.ejs",
-		"/F/githubstar/app/controllers/articles.server.controller.js",
-		"/C/Users/Jianqiang/AppData/Local/Temp/scp17785/home/wwwroot/node.lujq.me/web/config/strategies/github.js",
-		"/C/Users/Jianqiang/AppData/Local/Temp/scp16157/home/wwwroot/node.lujq.me/web/config/strategies/github.js",
-		"/C/Users/Jianqiang/AppData/Local/Temp/scp16263/home/wwwroot/node.lujq.me/web/config/express.js",
-		"/C/Users/Jianqiang/AppData/Local/Temp/scp15985/home/wwwroot/node.lujq.me/web/config/config.js",
-		"/C/Users/Jianqiang/AppData/Local/Temp/scp15224/home/wwwroot/node.lujq.me/web/config/passport.js",
-		"/C/Users/Jianqiang/AppData/Local/Temp/scp23388/home/wwwroot/node.lujq.me/web/package.json",
-		"/C/Users/Jianqiang/AppData/Local/Temp/scp20405/home/wwwroot/node.lujq.me/web/app/routes/users.server.routes.js",
-		"/C/Users/Jianqiang/AppData/Local/Temp/scp18773/home/wwwroot/node.lujq.me/web/config/env/development.js",
-		"/F/3285OS_08_01/config/strategies/twitter.js",
-		"/F/3285OS_08_01/public/articles/views/edit-article.client.view.html",
-		"/F/3285OS_08_01/public/users/views/list-users.client.view.html",
-		"/F/3285OS_08_01/public/users/controllers/users.client.controller.js",
-		"/F/3285OS_08_01/public/users/services/users.client.service.js",
-		"/C/Users/Jianqiang/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/Jianqiang/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
-		"/F/3285OS_08_01/public/users/views/edit-user.client.view.html",
-		"/F/3285OS_08_01/public/users/views/create-user.client.view.html",
-		"/F/3285OS_08_01/app/routes/articles.server.routes.js",
-		"/C/Users/Jianqiang/Desktop/github",
-		"/D/Python34/NEWS.txt",
-		"/F/linux.php",
-		"/F/3285OS_08_01/public/users/config/users.client.routes.js",
-		"/F/3285OS_08_01/public/articles/config/articles.client.routes.js",
-		"/F/3285OS_08_01/app/views/signup.ejs",
-		"/F/3285OS_08_01/public/articles/views/create-article.client.view.html",
-		"/F/3285OS_08_01/public/articles/controllers/articles.client.controller.js",
-		"/F/3285OS_08_01/app/controllers/articles.server.controller.js",
-		"/F/3285OS_08_01/public/example/config/example.client.routes.js",
-		"/F/3285OS_08_01/public/articles/services/articles.client.service.js",
-		"/F/3285OS_08_01/public/articles/views/list-articles.client.view.html"
+		"/F/66666/config/env/development.js"
 	],
 	"find":
 	{
@@ -627,6 +671,41 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"3",
+			"战斗力",
+			"row",
+			"drawnWidth",
+			"max-width",
+			"width",
+			"max-width",
+			"max-width: 30px;",
+			".ui-grid-coluiGrid",
+			"h4",
+			"h3",
+			"article",
+			"height=600",
+			"    \n",
+			"在线教练",
+			"package-de",
+			"myelpa",
+			"setq package-archives",
+			"(setq package-archives",
+			"grid",
+			"small",
+			"b",
+			"pre",
+			"<pre",
+			"px",
+			"75",
+			"9",
+			"40",
+			"px",
+			"_id",
+			"username",
+			"20px",
+			"h1",
+			"h3",
+			"color",
 			"github",
 			"stat",
 			" '",
@@ -719,42 +798,7 @@
 			"INSERT S_City (CityID, CityName, ZipCode, ProvinceID, DateCreated, DateUpdated) VALUES ",
 			"CAST(0x00009A2801491011 AS DateTime)",
 			"CAST(0x00009A2801491015 AS DateTime)",
-			"INSERT S_District (DistrictID, DistrictName, CityID, DateCreated, DateUpdated)",
-			"class",
-			"./",
-			"class",
-			"php",
-			"<?php\n/**\n  * wechat php test\n  */\n\n//define your token\ndefine(\"TOKEN\", \"Golmic\");\n$wechatObj = new wechatCallbackapiTest();\n//$wechatObj->valid();\n$wechatObj->responseMsg();\n\nclass wechatCallbackapiTest\n{\n	public function valid()\n    {\n        $echoStr = $_GET[\"echostr\"];\n\n        //valid signature , option\n        if($this->checkSignature()){\n        	echo $echoStr;\n        	exit;\n        }\n    }\n\n    public function responseMsg()\n    {\n        include_once \"wxBizMsgCrypt.php\";\n$encodingAesKey = \"xxZcVg0ACrgXtEstKnIITRG3sKtxFWnUL6xsOlwIPbW\";\n$token = TOKEN;\n$timestamp = $_GET[\"timestamp\"];\n$nonce = $_GET[\"nonce\"];\n$appId = \"wx4a7d9622c8ca7bb2\";\n$msg_sign = $_GET[\"msg_signature\"];\n\n$pc = new WXBizMsgCrypt($token, $encodingAesKey, $appId);\n		//get post data, May be due to the different environments\n		$postStr = $GLOBALS[\"HTTP_RAW_POST_DATA\"];\n$msg = '';\n$errCode = $pc->decryptMsg($msg_sign, $timeStamp, $nonce, $postStr, $msg);\nif ($errCode == 0) {\n    $postStr=$msg;      	//extract post data\n		if (!empty($postStr)){\n                /* libxml_disable_entity_loader is to prevent XML eXternal Entity Injection,\n                   the best way is to check the validity of xml by yourself */\n                libxml_disable_entity_loader(true);\n              	$postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);\n                $fromUsername = $postObj->FromUserName;\n                $toUsername = $postObj->ToUserName;\n                $keyword = trim($postObj->Content);\n                $time = time();\n                $textTpl = \"<xml>\n							<ToUserName><![CDATA[%s]]></ToUserName>\n							<FromUserName><![CDATA[%s]]></FromUserName>\n							<CreateTime>%s</CreateTime>\n							<MsgType><![CDATA[%s]]></MsgType>\n							<Content><![CDATA[%s]]></Content>\n							<FuncFlag>0</FuncFlag>\n							</xml>\";\n              	$msgType = \"text\";\n				if(!empty( $keyword ))\n                {\n              		if(substr($keyword,-6)=='天气'){\n              			include('weather.php');\n              		}\n              		elseif (strstr($keyword,'笑话')){\n              			$contentStr = file_get_contents(\"http://brisk.eu.org/api/joke.php\");\n              		}else{\n                		$contentStr = '萌萌哒你可以发送 [城市名+\"天气\" ] ，如 \"北京天气\" 获取天气信息;发送“给我讲个笑话”之类的我会给你讲笑话~'/*.substr($keyword,0,9)*/;\n                   	}\n                	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);\n                   	echo $resultStr;\n                }else{\n                	echo \"Input something...\";\n                }\n\n        }else {\n        	echo \"\";\n        	exit;\n        }\n        else {\n    print($errCode . \"\\n\");\n}\n}\n\n    }\n	private function checkSignature()\n	{\n        // you must define TOKEN by yourself\n        if (!defined(\"TOKEN\")) {\n            throw new Exception('TOKEN is not defined!');\n        }\n        $signature = $_GET[\"signature\"];\n        $timestamp = $_GET[\"timestamp\"];\n        $nonce = $_GET[\"nonce\"];\n		$token = TOKEN;\n		$tmpArr = array($token, $timestamp, $nonce);\n        // use SORT_STRING rule\n		sort($tmpArr, SORT_STRING);\n		$tmpStr = implode( $tmpArr );\n		$tmpStr = sha1( $tmpStr );\n		if( $tmpStr == $signature ){\n			return true;\n		}else{\n			return false;\n		}\n	}\n}\n\n?>",
-			"weather_data",
-			"temperature",
-			"$i",
-			"$j",
-			"$i",
-			"hr",
-			"left",
-			".post-date",
-			".post-meta",
-			"display: block;",
-			"img",
-			".main-header {",
-			".main-header",
-			".no-cover.main-header",
-			".main-header",
-			"padding",
-			"rss",
-			"+86",
-			"margin",
-			".",
-			",",
-			"title",
-			",",
-			".",
-			"get_post_meta",
-			"github",
-			"action-bar",
-			"function",
-			"send",
-			"cainfo"
+			"INSERT S_District (DistrictID, DistrictName, CityID, DateCreated, DateUpdated)"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -777,24 +821,24 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/index.ejs",
+					"file": "public/application.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1224,
+						"buffer_size": 476,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								753,
-								753
+								134,
+								134
 							]
 						],
 						"settings":
@@ -803,16 +847,36 @@
 							"auto_complete": false,
 							"bh_regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -823,69 +887,142 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"colorcode": true,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 103.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/example/controllers/example.client.controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								348,
+								348
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
-								"bh_single_quote_content"
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
 							],
 							"colorcode": true,
 							"origin_encoding": "ASCII",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "app/controllers/index.server.controller.js",
+					"buffer": 2,
+					"file": "public/example/views/example.client.view.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 297,
+						"buffer_size": 1270,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								284,
-								284
+								558,
+								558
 							]
 						],
 						"settings":
@@ -894,21 +1031,16 @@
 							"auto_complete": false,
 							"bh_regions":
 							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
@@ -924,58 +1056,249 @@
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
-								"bh_single_quote_content"
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
 							],
 							"colorcode": true,
 							"origin_encoding": "ASCII",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/routes/users.server.routes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 911,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								905,
+								905
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"colorcode": true,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/users.server.controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1428,
+								1428
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"colorcode": true,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 960.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "public/example/controllers/example.client.controller.js",
+					"buffer": 5,
+					"file": "app/routes/index.server.routes.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1120,
+						"buffer_size": 185,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								835,
-								835
+								184,
+								184
 							]
 						],
 						"settings":
@@ -984,21 +1307,16 @@
 							"auto_complete": false,
 							"bh_regions":
 							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
@@ -1014,31 +1332,36 @@
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
-								"bh_single_quote_content"
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
 							],
 							"colorcode": true,
 							"origin_encoding": "ASCII",
@@ -1052,20 +1375,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "public/example/services/example.client.service.js",
+					"buffer": 6,
+					"file": "app/controllers/index.server.controller.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 379,
+						"buffer_size": 453,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								355,
-								355
+								450,
+								450
 							]
 						],
 						"settings":
@@ -1074,21 +1397,16 @@
 							"auto_complete": false,
 							"bh_regions":
 							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
@@ -1104,49 +1422,55 @@
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
-								"bh_single_quote_content"
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
 							],
 							"colorcode": true,
+							"origin_encoding": "ASCII",
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "/F/3285OS_08_01/public/articles/controllers/articles.client.controller.js",
-					"semi_transient": false,
+					"buffer": 7,
+					"file": "app/models/user.server.model.js",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 3301,
+						"buffer_size": 1732,
 						"regions":
 						{
 						},
@@ -1162,21 +1486,16 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
@@ -1192,31 +1511,36 @@
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
-								"bh_single_quote_content"
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
 							],
 							"colorcode": true,
 							"origin_encoding": "ASCII",
@@ -1225,333 +1549,44 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1080.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/routes/users.server.routes.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 734,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								472,
-								472
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"colorcode": true,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "public/application.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 476,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								121,
-								121
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"colorcode": true,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "public/example/config/example.client.routes.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 275,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								202,
-								202
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"colorcode": true,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "public/example/views/example.client.view.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 483,
+						"buffer_size": 5327,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								483,
-								483
+								865,
+								865
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"auto_name": "<section>",
+							"auto_name": "[{",
 							"bh_regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1562,182 +1597,16 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"colorcode": true,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/AngularJS/AngularJS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "bower.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 172,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								162,
-								162
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": true,
-							"auto_name": "{",
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"colorcode": true,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": ".bowerrc",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 30,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3,
-								3
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_name": "{",
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -1748,31 +1617,30 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
 							],
 							"colorcode": true,
-							"origin_encoding": "ASCII",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]

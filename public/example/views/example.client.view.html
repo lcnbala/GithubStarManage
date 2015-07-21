@@ -1,13 +1,35 @@
 <section ng-controller="ExampleController" data-ng-init="find()">
-  <input type=text id=text1 ng-model=name>
-  <input type=text id=text2 ng-model=name>
-  <ol>
-  <li data-ng-repeat="repo in repos">
-    <a data-ng-href="#!/articles/{{repo._id}}" data-ng-bind="repo.name"></a>
-    <br>
-    <small data-ng-bind="repo.html_url | date:'medium'"></small>
-    <small>/</small>
-    <small data-ng-bind="repo.owner.username"></small>
-    <p data-ng-bind="repo.id"></p>
-  </li></ol>
+    <table st-table="rowCollection" class="table table-striped">
+        <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>name</th>
+                    <th>owner</th>
+                    <th>description</th>
+                </tr>
+                <!-- <tr>
+                    <th colspan="5">
+                        <input st-search="" class="form-control" placeholder="global search ..." type="text" />
+                    </th>
+                </tr> -->
+        </thead>
+        <tbody>
+            <tr ng-repeat="repo in repos">
+                <td>{{repo.id}}</td>
+                <td><a href="{{repo.html_url}}">{{repo.name}}</a></td>
+                <td>{{repo.owner.login}}</td>
+                <td>{{repo.description}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <input type=text id="text1" ng-model="name">
+    <input type=text id="text2" ng-model="name">
+    <ol>
+        <li data-ng-repeat="repo in rowCollection">
+            <a data-ng-href="{{repo.html_url}}" data-ng-bind="repo.name"></a>
+            <br>
+            <p data-ng-bind="repo.email"></p>
+            <p data-ng-bind="repo.description"></p>
+        </li>
+    </ol>
 </section>

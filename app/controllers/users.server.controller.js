@@ -39,12 +39,13 @@ exports.listUsers = function(req, res, next) {
         }
     });
 };
-exports.listStarred = function(req, res, next) {
+exports.listStarred = function(req, res) {
     res.send(req.user.repositories);
 };
 exports.read = function(req, res) {
     res.json(req.user);
 };
+/*
 exports.userByID = function(req, res, next, _id) {
     User.findOne({
         _id: _id
@@ -56,7 +57,20 @@ exports.userByID = function(req, res, next, _id) {
             next();
         }
     });
+};*/
+exports.userByUsername = function(req, res, next, username) {
+    User.findOne({
+        username: username
+    }, function(err, user) {
+        if (err) {
+            return next(err);
+        } else {
+            req.user = user;
+            next();
+        }
+    });
 };
+
 exports.update = function(req, res, next) {
     User.findByIdAndUpdate(req.user._id, req.body, function(err, user) {
         if (err) {
@@ -75,43 +89,13 @@ exports.delete = function(req, res, next) {
         }
     })
 };
-// Create a new controller method that creates new 'OAuth' users
-exports.saveUserProfile = function(req, profile, done) {
-    // Try finding a user document that was registered using the current OAuth provider
-    User.findOne({
-        _id: profile._id
-    }, function(err, user) {
-        // If an error occurs continue to the next middleware
-        if (err) {
-            return done(err);
-        } else {
-            // If a user could not be found, create a new user, otherwise, continue to the next middleware
-            if (!user) {
-                // Set a possible base username
-                var possibleUsername = profile.username || ((profile.email) ? profile.email.split('@')[0] : '');
-
-                // Find a unique available username
-                User.findUniqueUsername(possibleUsername, null, function(availableUsername) {
-                    // Set the available user name
-                    profile.username = availableUsername;
-
-                    // Create the user
-                    user = new User(profile);
-
-                    // Try saving the new user document
-                    user.save(function(err) {
-                        // Continue to the next middleware
-                        return done(err, user);
-                    });
-                });
-            } else {
-                // Continue to the next middleware
-                return done(err, user);
-            }
-        }
-    });
+exports.requiresLogin = function(req, res, next) {
+    if (!req.user) {
+        return res.status(401).send({
+            message: 'User is not logged in1111'
+        });}
+    next();
 };
-
 exports.LinkToGithub = function(req, accessToken, done) {
     async.waterfall([
         function(done) {
@@ -130,7 +114,7 @@ exports.LinkToGithub = function(req, accessToken, done) {
         },
         function(profile, done) {
             request({
-                url: 'https://api.github.com/users/'+profile.username+'/starred',
+                url: 'https://api.github.com/users/' + profile.username + '/starred?per_page=10000',
                 headers: {
                     'User-Agent': 'Mozilla/5.0'
                 }
@@ -174,4 +158,20 @@ exports.LinkToGithub = function(req, accessToken, done) {
         });
     })
 
+};
+exports.updateStarred = function(req, res) {
+    request({
+        url: 'https://api.github.com/users/' + req.user.username + '/starred?per_page=10',
+        headers: {
+            'User-Agent': 'Mozilla/5.0'
+        }
+    }, function(error, response, repositories) {
+        var message = "";
+        repositories = JSON.parse(repositories);
+        res.end(repositories[1].id+repositories[1].name);
+        for(repo in repositories){
+            message += repo;
+        }
+        //res.send(message);
+    });
 };
