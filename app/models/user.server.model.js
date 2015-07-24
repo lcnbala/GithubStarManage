@@ -1,13 +1,14 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 var UserSchema = new Schema({
-    _id: String,
+    _id: Number,
     username: {
         type: String,
         trim: true,
         unique: true,
         required: true
     },
+    user_name:String,
     accessToken: String,
     email: {
         type: String,
@@ -20,7 +21,7 @@ var UserSchema = new Schema({
     blog: String,
     location: String,
     email: String,
-    type:String,
+    type: String,
     followers: Number,
     following: Number,
     created_at: String,
@@ -33,8 +34,26 @@ var UserSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    repositories: [],
-    tags: []
+    repositories: [{
+        _id: {
+            type: Number,
+            unique: true
+        },
+        name: String,
+        owner: {},
+        html_url: String,
+        description: String,
+        remark:String,
+        created_at: Date,
+        updated_at: Date,
+        pushed_at: Date,
+        homepage: String,
+        size: Number,
+        stargazers_count: Number,
+        language: String,
+        tags:[]
+    }],
+    tags:[]
 });
 
 

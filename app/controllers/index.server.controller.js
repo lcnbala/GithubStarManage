@@ -6,7 +6,7 @@ exports.render = function(req, res) {
     req.session.lastVisit = new Date();
     res.render('index', {
         title: req.user.username,
-        user: JSON.stringify(req.user.username)
+        user: JSON.stringify(req.user)
     });}
   else{
   	res.send('<html><body><h1><a href="https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">oauth2</a></h1></body></html>');

@@ -1,13 +1,20 @@
 <section ng-controller="ExampleController" data-ng-init="find()">
+    <form enctype='application/json' action="{{user.user_name}}" method="post">
+        <input type="text" name="tags">
+        <input type="submit">
+    </form>
+    <p>{{user.user_name}}</p>
+    <input type="text" id="text1" ng-model="user.name">
+    <input type="text" id="text2" ng-model="user.name">
     <table st-table="rowCollection" class="table table-striped">
         <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>name</th>
-                    <th>owner</th>
-                    <th>description</th>
-                </tr>
-                <!-- <tr>
+            <tr>
+                <th>ID</th>
+                <th>name</th>
+                <th>owner</th>
+                <th>description</th>
+            </tr>
+            <!-- <tr>
                     <th colspan="5">
                         <input st-search="" class="form-control" placeholder="global search ..." type="text" />
                     </th>
@@ -15,15 +22,13 @@
         </thead>
         <tbody>
             <tr ng-repeat="repo in repos">
-                <td>{{repo.id}}</td>
+                <td>{{repo._id}}</td>
                 <td><a href="{{repo.html_url}}">{{repo.name}}</a></td>
                 <td>{{repo.owner.login}}</td>
                 <td>{{repo.description}}</td>
             </tr>
         </tbody>
     </table>
-    <input type=text id="text1" ng-model="name">
-    <input type=text id="text2" ng-model="name">
     <ol>
         <li data-ng-repeat="repo in rowCollection">
             <a data-ng-href="{{repo.html_url}}" data-ng-bind="repo.name"></a>

@@ -42,22 +42,13 @@ exports.listUsers = function(req, res, next) {
 exports.listStarred = function(req, res) {
     res.send(req.user.repositories);
 };
+exports.listTags = function(req, res) {
+    res.send(req.user.tags);
+};
 exports.read = function(req, res) {
     res.json(req.user);
 };
-/*
-exports.userByID = function(req, res, next, _id) {
-    User.findOne({
-        _id: _id
-    }, function(err, user) {
-        if (err) {
-            return next(err);
-        } else {
-            req.user = user;
-            next();
-        }
-    });
-};*/
+
 exports.userByUsername = function(req, res, next, username) {
     User.findOne({
         username: username
@@ -71,6 +62,25 @@ exports.userByUsername = function(req, res, next, username) {
     });
 };
 
+exports.addTags = function(req, res) {
+    console.log(req.user.tags);//这是正常的
+    var tags = req.body.tags.split(",");
+    for (var i in tags) {
+        req.user.tags.addToSet(tags[i]);//这个报错,ubdefined
+    };
+    req.user.save(function(err) {
+        if (err) {
+            res.send("添加用户级tag失败!");
+        } else {
+            //res.send('更新数据成功!');
+            res.send('添加用户级tag成功');
+        };
+    });
+}
+
+
+
+/*
 exports.update = function(req, res, next) {
     User.findByIdAndUpdate(req.user._id, req.body, function(err, user) {
         if (err) {
@@ -88,12 +98,13 @@ exports.delete = function(req, res, next) {
             res.json(req.user);
         }
     })
-};
+};*/
 exports.requiresLogin = function(req, res, next) {
     if (!req.user) {
         return res.status(401).send({
             message: 'User is not logged in1111'
-        });}
+        });
+    }
     next();
 };
 exports.LinkToGithub = function(req, accessToken, done) {
@@ -107,6 +118,7 @@ exports.LinkToGithub = function(req, accessToken, done) {
             }, function(error, response, profile) {
                 profile = JSON.parse(profile);
                 profile.username = profile.login;
+                profile.user_name = 'user/'+profile.login;
                 profile._id = profile.id;
                 profile.accessToken = accessToken;
                 done(null, profile);
@@ -114,12 +126,28 @@ exports.LinkToGithub = function(req, accessToken, done) {
         },
         function(profile, done) {
             request({
-                url: 'https://api.github.com/users/' + profile.username + '/starred?per_page=10000',
+                url: 'https://api.github.com/users/' + profile.username + '/starred?per_page=100',
                 headers: {
                     'User-Agent': 'Mozilla/5.0'
                 }
             }, function(error, response, repositories) {
-                profile.repositories = JSON.parse(repositories);
+                repositories = JSON.parse(repositories);
+                for (i in repositories) {
+                    repositories[i]._id = repositories[i].id;
+                    delete repositories[i].owner.url;
+                    delete repositories[i].owner.gravatar_id;
+                    delete repositories[i].owner.followers_url;
+                    delete repositories[i].owner.following_url;
+                    delete repositories[i].owner.gists_url;
+                    delete repositories[i].owner.starred_url;
+                    delete repositories[i].owner.subscriptions_url;
+                    delete repositories[i].owner.organizations_url;
+                    delete repositories[i].owner.repos_url;
+                    delete repositories[i].owner.events_url;
+                    delete repositories[i].owner.received_events_url;
+                    delete repositories[i].owner.site_admin;
+                }
+                profile.repositories = repositories;
                 done(null, profile);
             });
         }
@@ -160,18 +188,30 @@ exports.LinkToGithub = function(req, accessToken, done) {
 
 };
 exports.updateStarred = function(req, res) {
+    console.time('series');
     request({
-        url: 'https://api.github.com/users/' + req.user.username + '/starred?per_page=10',
+        url: 'https://api.github.com/users/' + req.user.username + '/starred?per_page=100',
         headers: {
             'User-Agent': 'Mozilla/5.0'
         }
-    }, function(error, response, repositories) {
-        var message = "";
-        repositories = JSON.parse(repositories);
-        res.end(repositories[1].id+repositories[1].name);
-        for(repo in repositories){
-            message += repo;
-        }
-        //res.send(message);
+    }, function(error, response, repos) {
+        console.timeEnd('series');
+        console.time('series1');
+        repos = JSON.parse(repos);
+        for (var i in repos) {
+            repos[i]._id = repos[i].id;
+            delete repos[i].id;
+            req.user.repositories.addToSet(repos[i]);
+        };
+        req.user.save(function(err) {
+            if (err) {
+                res.send("更新数据失败!");
+            } else {
+                //res.send('更新数据成功!');
+                res.redirect('/');
+            };
+            console.timeEnd('series1');
+        });
+
     });
 };

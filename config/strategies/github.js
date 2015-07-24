@@ -22,29 +22,5 @@ module.exports = function() {
         },
         function(req, accessToken, refreshToken, profile, done) {
             users.LinkToGithub(req, accessToken, done);
-            /*
-            request({
-                url: 'https://api.github.com/users/golmic/starred',
-                headers: {
-                    'User-Agent': 'Mozilla/5.0'
-                }
-            }, function(error, response, repositories) {
-                repositories = JSON.parse(repositories);
-                request({
-                    url: 'https://api.github.com/user?access_token=' + accessToken,
-                    headers: {
-                        'User-Agent': 'Mozilla/5.0'
-                    }
-                }, function(error, response, profile) {
-                    profile = JSON.parse(profile);
-                    profile.username = profile.login;
-                    profile._id = profile.id;
-                    profile.accessToken = accessToken;
-                    profile.repositories = repositories;
-                    users.saveUserProfile(req, profile, done);
-                    //profile.repositories = ["a", "b", "c"];
-                });
-            });*/
-
         }));
 };
