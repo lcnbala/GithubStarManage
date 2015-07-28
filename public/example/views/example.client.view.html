@@ -1,40 +1,63 @@
-<section ng-controller="ExampleController" data-ng-init="find()">
+<style type="text/css">
+.st-selected {
+    background-color: red;
+}
+</style>
+<h1><a href="https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">添加用户标签后点击这刷新查看</a></h1>
+<section ng-controller="ExampleController">
     <form enctype='application/json' action="{{user.user_name}}" method="post">
         <input type="text" name="tags">
         <input type="submit">
     </form>
-    <p>{{user.user_name}}</p>
-    <input type="text" id="text1" ng-model="user.name">
-    <input type="text" id="text2" ng-model="user.name">
-    <table st-table="rowCollection" class="table table-striped">
+    <p>从上面添加用户级标签，以英文逗号可添加多个。用户级标签：</p>
+    <p ng-bind="{{user.tags}}"></p>
+    <p>下面的框框和第一个搜索框绑定，选择你要搜索哪一列的内容</p>
+    <select id="predicate" ng-model="selectedPredicate" ng-options="predicate for predicate in predicates"></select>
+    <p>下面的框框是每页显示多少条数据，本页最最下面是分页，是可以点击的。。虽然没出来小手。</p>
+    <input type="number" ng-model="itemsByPage">
+    <p>拖拽表头可以对列重新排序</p>
+    <form action="/user/golmic/addTagToRepos" method="post">
+    <select name="tag">
+        <option ng-repeat="tag in user.tags" value="{{tag}}">{{tag}}</option>
+    </select>
+    <table st-table="displayedCollection" st-safe-src="remote" class="table table-striped">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>name</th>
-                <th>owner</th>
-                <th>description</th>
+                <th></th>
+                <th lr-drag-src="headers" lr-drop-target="headers" ng-repeat="col in predicates" st-sort="{{col}}">{{col}}</th>
+                <!-- <th st-sort="_id">_id</th>
+                <th st-sort="id">id</th>
+                <th st-sort="name">name</th>
+                <th st-sort="language">language</th>
+                <th st-sort="description">description</th> -->
             </tr>
-            <!-- <tr>
-                    <th colspan="5">
-                        <input st-search="" class="form-control" placeholder="global search ..." type="text" />
-                    </th>
-                </tr> -->
+            <tr>
+                <th>
+                    <input st-search="{{selectedPredicate}}" placeholder="搜上面选的选项(默认是_id)" type="search" />
+                </th>
+                <th>
+                    <input st-search="id" placeholder="搜ID" type="search" />
+                </th>
+                <th colspan="3">
+                    <input st-search placeholder="全局搜索" type="search" />
+                </th>
+            </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="repo in repos">
-                <td>{{repo._id}}</td>
-                <td><a href="{{repo.html_url}}">{{repo.name}}</a></td>
-                <td>{{repo.owner.login}}</td>
-                <td>{{repo.description}}</td>
+        
+            <tr ng-repeat="row in displayedCollection">
+                <td cs-select="row"></td>
+                <td ng-repeat="col in predicates">{{row[col]}}</td>
             </tr>
+            <input type="submit" value="Submit" />
+            
         </tbody>
-    </table>
-    <ol>
-        <li data-ng-repeat="repo in rowCollection">
-            <a data-ng-href="{{repo.html_url}}" data-ng-bind="repo.name"></a>
-            <br>
-            <p data-ng-bind="repo.email"></p>
-            <p data-ng-bind="repo.description"></p>
-        </li>
-    </ol>
+        <tfoot>
+            <tr>
+                <td colspan="5" class="text-center">
+                    <div st-pagination="" st-items-by-page="itemsByPage"></div>
+                </td>
+            </tr>
+        </tfoot>
+    </table></form>
 </section>

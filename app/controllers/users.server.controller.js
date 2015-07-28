@@ -1,4 +1,5 @@
 var User = require('mongoose').model('User'),
+    ObjectId = require('mongoose').Schema.Types.ObjectId,
     passport = require('passport'),
     request = require('request'),
     async = require('async');
@@ -42,7 +43,7 @@ exports.listUsers = function(req, res, next) {
 exports.listStarred = function(req, res) {
     res.send(req.user.repositories);
 };
-exports.listTags = function(req, res) {
+exports.listUserTags = function(req, res) {
     res.send(req.user.tags);
 };
 exports.read = function(req, res) {
@@ -62,11 +63,10 @@ exports.userByUsername = function(req, res, next, username) {
     });
 };
 
-exports.addTags = function(req, res) {
-    console.log(req.user.tags);//这是正常的
+exports.addUserTags = function(req, res) {
     var tags = req.body.tags.split(",");
     for (var i in tags) {
-        req.user.tags.addToSet(tags[i]);//这个报错,ubdefined
+        req.user.tags.addToSet(tags[i]);
     };
     req.user.save(function(err) {
         if (err) {
@@ -77,7 +77,22 @@ exports.addTags = function(req, res) {
         };
     });
 }
+exports.addTagToRepos = function(req, res) {
+    console.log(req.body._ids);
+    var _ids = req.body._ids,
+        tag = req.body.tag;
+    for (var i in _ids) {
+        console.log(_ids[i]);
+        User.update({
+            "repositories._id": _ids[i]
+        }, {$addToSet:{"repositories.$.tags":tag}}, function(err, result) {
+            console.log(JSON.stringify(result));
+        });
+    };
 
+
+    res.send(req.body._ids);
+}
 
 
 /*
@@ -118,7 +133,7 @@ exports.LinkToGithub = function(req, accessToken, done) {
             }, function(error, response, profile) {
                 profile = JSON.parse(profile);
                 profile.username = profile.login;
-                profile.user_name = 'user/'+profile.login;
+                profile.user_name = 'user/' + profile.login;
                 profile._id = profile.id;
                 profile.accessToken = accessToken;
                 done(null, profile);
@@ -133,7 +148,7 @@ exports.LinkToGithub = function(req, accessToken, done) {
             }, function(error, response, repositories) {
                 repositories = JSON.parse(repositories);
                 for (i in repositories) {
-                    repositories[i]._id = repositories[i].id;
+                    //repositories[i]._id = repositories[i].id;
                     delete repositories[i].owner.url;
                     delete repositories[i].owner.gravatar_id;
                     delete repositories[i].owner.followers_url;
@@ -199,8 +214,8 @@ exports.updateStarred = function(req, res) {
         console.time('series1');
         repos = JSON.parse(repos);
         for (var i in repos) {
-            repos[i]._id = repos[i].id;
-            delete repos[i].id;
+            //repos[i]._id = repos[i].id;
+            //delete repos[i].id;
             req.user.repositories.addToSet(repos[i]);
         };
         req.user.save(function(err) {

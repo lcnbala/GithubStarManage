@@ -35,10 +35,7 @@ var UserSchema = new Schema({
         default: Date.now
     },
     repositories: [{
-        _id: {
-            type: Number,
-            unique: true
-        },
+        id: Number,
         name: String,
         owner: {},
         html_url: String,
