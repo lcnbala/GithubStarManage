@@ -85,15 +85,33 @@ exports.addTagToRepos = function(req, res) {
         console.log(_ids[i]);
         User.update({
             "repositories._id": _ids[i]
-        }, {$addToSet:{"repositories.$.tags":tag}}, function(err, result) {
+        }, {
+            $addToSet: {
+                "repositories.$.tags": tag
+            }
+        }, function(err, result) {
             console.log(JSON.stringify(result));
         });
     };
-
-
     res.send(req.body._ids);
 }
-
+exports.addRemark = function(req, res) {
+    var remark = req.body.tag;
+    for (var _id in req.body) {
+        if (_id != 'tag' && req.body[_id]) {
+            User.update({
+                "repositories._id": _id
+            }, {
+                $set: {
+                    "repositories.$.remark": req.body[_id]
+                }
+            }, function(err, result) {
+                console.log(JSON.stringify(result));
+            });
+        };
+    };
+    res.send(req.body);
+}
 
 /*
 exports.update = function(req, res, next) {

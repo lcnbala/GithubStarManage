@@ -20,6 +20,8 @@ module.exports = function(app) {
         .get(users.requiresLogin, users.read);
     app.route('/user/:userId/addTagToRepos')
         .post(users.addTagToRepos);
+    app.route('/user/:userId/addRemark')
+        .post(users.addRemark);
     app.route('/user/:userId/starred')
         .get(users.requiresLogin, users.listStarred);
     app.route('/user/:userId/listUserTags')

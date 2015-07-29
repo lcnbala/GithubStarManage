@@ -6,7 +6,7 @@ angular.module('example').controller('ExampleController', ['$scope', '$filter', 
             $scope.repos = Example.query();
         };*/
         $scope.remote = Example.query();
-        $scope.predicates = ['id', 'name', 'description', 'language','tags'];
+        $scope.predicates = ['name', 'description', 'language','tags'];
         $scope.selectedPredicate = $scope.predicates[0];
     }
 ]);
