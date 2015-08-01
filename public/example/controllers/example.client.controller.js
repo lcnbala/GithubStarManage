@@ -6,8 +6,8 @@ angular.module('example').controller('ExampleController', ['$scope', '$filter', 
             $scope.repos = Example.query();
         };*/
         $scope.remote = Example.query();
-        $scope.predicates = ['name', 'description', 'language','tags'];
-        $scope.selectedPredicate = $scope.predicates[0];
+        $scope.attributes = ['name', 'description', 'language','tags'];
+        $scope.selectedAttribute = $scope.attributes[0];
     }
 ]);
 angular.module('example').directive('csSelect', function () {

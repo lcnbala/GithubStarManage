@@ -3,7 +3,7 @@
 
 // Set the 'development' environment configuration object
 module.exports = {
-    db: 'mongodb://localhost/mean-19',
+    db: 'mongodb://localhost/mean-20',
     sessionSecret: 'developmentSessionSecret',
     github: {
         clientID: '4c4ff12d4ea2e9212252',

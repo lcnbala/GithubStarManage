@@ -77,39 +77,51 @@ exports.addUserTags = function(req, res) {
         };
     });
 }
-exports.addTagToRepos = function(req, res) {
-    console.log(req.body._ids);
+/*exports.addTagToRepos = function(req, res) {
+    // console.log(req.body._ids);
+    console.log(req.body);
     var _ids = req.body._ids,
         tag = req.body.tag;
     for (var i in _ids) {
-        console.log(_ids[i]);
+        //console.log(_ids[i]);
         User.update({
             "repositories._id": _ids[i]
         }, {
             $addToSet: {
                 "repositories.$.tags": tag
             }
-        }, function(err, result) {
-            console.log(JSON.stringify(result));
-        });
+        }, function(err, result) {});
     };
     res.send(req.body._ids);
-}
-exports.addRemark = function(req, res) {
-    var remark = req.body.tag;
+}*/
+exports.addRemarkAndTag = function(req, res) {
     for (var _id in req.body) {
-        if (_id != 'tag' && req.body[_id]) {
-            User.update({
-                "repositories._id": _id
-            }, {
-                $set: {
-                    "repositories.$.remark": req.body[_id]
-                }
-            }, function(err, result) {
-                console.log(JSON.stringify(result));
-            });
+        //console.log(_id);
+        if (_id != 'tag' && _id != '_ids') {
+            if (req.body[_id]) {
+                User.update({
+                    "repositories._id": _id
+                }, {
+                    $set: {
+                        "repositories.$.remark": req.body[_id]
+                    }
+                }, function(err, result) {});
+            };
+        } else {
+            var _ids = req.body._ids,
+                tag = req.body.tag;
+            for (var i in _ids) {
+                //console.log(_ids[i]);
+                User.update({
+                    "repositories._id": _ids[i]
+                }, {
+                    $addToSet: {
+                        "repositories.$.tags": tag
+                    }
+                }, function(err, result) {});
+            };
         };
-    };
+    }
     res.send(req.body);
 }
 
@@ -152,6 +164,7 @@ exports.LinkToGithub = function(req, accessToken, done) {
                 profile = JSON.parse(profile);
                 profile.username = profile.login;
                 profile.user_name = 'user/' + profile.login;
+                profile.addRemarkAndTag = 'user/' + profile.login+'/addRemarkAndTag';
                 profile._id = profile.id;
                 profile.accessToken = accessToken;
                 done(null, profile);
