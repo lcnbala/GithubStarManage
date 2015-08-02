@@ -7,52 +7,21 @@
     background-color: rgba(255, 247, 235, 0.87);
 }
 </style>
-<div class="modal fade" id="myModal" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
-                </button>
-                <h4 class="modal-title" id="myModalLabel">
-               欢迎使用GithubStarManage
-            </h4>
-            </div>
-            <div class="modal-body">
-                <p>在我自己使用Github时，往往发现太多好的repos，Star过后，太多Star又变得不易挖掘，为了方便管理Star过的项目，我花10多天用MEAN全栈写了这个管理系统。</p>
-                <p>本项目源码公开，项目地址：<a href="https://github.com/golmic/GithubStarManage" target="_blank">https://github.com/golmic/GithubStarManage</a> 欢迎Star及issues</p>
-                <p>另外求互联网公司技术岗位工作机会，线上简历在<a href="http://golmic.deercv.com" target="_blank">http://golmic.deercv.com</a></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">我已经Star过啦
-                </button>
-                <button type="button" class="btn btn-default"><a href="https://github.com/golmic/GithubStarManage" target="_blank">我等会再去Star</a>
-                </button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
-<script>
-$(function() {
-    $('#myModal').modal({
-        keyboard: true
-    })
-});
-</script>
 <section ng-controller="ExampleController">
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                    点击折叠/展开使用说明
+                    点击展开/折叠使用说明
                 </a>
                 </h4>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
+            <div id="collapseOne" class="panel-collapse collapse">
                 <div class="panel-body">
+                    <p>在我自己使用Github时，往往发现太多好的repos，Star过后，太多Star又变得不易挖掘，为了方便管理Star过的项目，我花10多天用MEAN全栈写了这个管理系统。</p>
+                    <p>本项目源码公开，项目地址：<a href="https://github.com/golmic/GithubStarManage" target="_blank">https://github.com/golmic/GithubStarManage</a> 欢迎Star及issues</p>
+                    <p>另外求互联网公司技术岗位工作机会，线上简历在<a href="http://golmic.deercv.com" target="_blank">http://golmic.deercv.com</a></p>
                     <p>本系统实现了对GithubStar过的项目的搜索/添加tags/添加个性化描述等功能来加强对Star功能的利用。</p>
                     <p>总体设计易于上手，而为了信息聚合以及设计简洁的需要，我把所有功能整合到了下面这一个表格中，所以有必要对某些功能提供一个说明</p>
                     <hr>

@@ -70,10 +70,10 @@ exports.addUserTags = function(req, res) {
     };
     req.user.save(function(err) {
         if (err) {
-            res.send("添加用户级tag失败!");
+            res.send("添加用户级tag失败!请向开发者报告此消息。谢谢支持。");
         } else {
             //res.send('更新数据成功!');
-            res.send('添加用户级tag成功');
+            res.send('添加用户级tag成功，<a href="https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">点击返回</a>');
         };
     });
 }
@@ -122,7 +122,8 @@ exports.addRemarkAndTag = function(req, res) {
             };
         };
     }
-    res.send(req.body);
+    res.redirect('/');
+    //res.send(req.body);
 }
 
 /*
