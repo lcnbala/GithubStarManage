@@ -1,1 +1,1 @@
-angular.module('example',['smart-table','lrDragNDrop']);
+angular.module('example',['smart-table']);

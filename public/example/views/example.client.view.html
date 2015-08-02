@@ -63,18 +63,25 @@ $(function() {
                     <hr>
                     <p>添加自定义描述：表格中的remark列是input类型的，所以可以添加自定义描述，支持批量添加，确认添加的按钮在表格最下方。此功能与批量添加tag是合并的。</p>
                     <hr>
-                    <p>搜索：支持全局搜索，特定列搜索。使用特定列搜索时，先在表格上方的设置中将欲搜索项激活。</p>
+                    <p>搜索：支持全局搜索，特定列搜索。使用特定列搜索时，先在表格上方的设置中将欲搜索项激活。搜索是实时展示的，设置延时为400ms.</p>
+                    <hr>
+                    <p>排序：点击列名，可以对相应列按升降序以及无序进行排序。</p>
+                    <hr>
+                    <p>项目还有很多需要优化的地方，欢迎提issue报bug以及建议。谢谢支持~</p>
                 </div>
             </div>
         </div>
     </div>
+    <div class="col-md-2">
+        <p>用户级标签列表：</p>
+        <p ng-bind="{{user.tags}}"></p>
+        <a href="https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">刷新用户级标签</a>
+    </div>
     <div class="col-md-4">
         <form enctype='application/json' action="{{user.user_name}}" method="post">
-            <p>用户级标签列表：<span ng-bind="{{user.tags}}"></span></p>
             <label>添加用户级标签：</label>
-            <input type="text" name="tags" placeholder="以英文逗号分隔可添加多个" class="form-control">
             <input type="submit" value="添加tags" class="btn btn-default">
-            <a href="https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">刷新用户级标签</a>
+            <input type="text" name="tags" placeholder="以英文逗号分隔可添加多个" class="form-control">
         </form>
     </div>
     <form action="{{user.addRemarkAndTag}}" method="post" class="row">
@@ -92,8 +99,9 @@ $(function() {
             <p>每页显示N条repos</p>
             <input type="number" ng-model="itemsByPage" class="form-control">
         </div>
-        <div class="col-md-2">
-        </div>
+        <br>
+        <hr>
+        <br>
         <div class="col-md-12">
             <table st-table="displayedCollection" st-safe-src="remote" class="table table-striped table-bordered table-hover">
                 <thead>
@@ -102,8 +110,8 @@ $(function() {
                         <th class="col-md-1">Add Tag</th>
                         <th st-sort="name" class="col-md-2">NAME</th>
                         <th st-sort="description" class="col-md-5">description</th>
-                        <th st-sort="tags" class="col-md-1">tags</th>
                         <th st-sort="language" class="col-md-1">language</th>
+                        <th st-sort="tags" class="col-md-1">tags</th>
                     </tr>
                     <tr>
                         <th>
@@ -116,6 +124,10 @@ $(function() {
                         </th>
                         <th>
                             <input st-search placeholder="global search" type="search" class="form-control" />
+                        </th>
+                        <th>
+                        </th>
+                        <th>
                         </th>
                     </tr>
                 </thead>
