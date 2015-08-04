@@ -64,36 +64,36 @@ exports.userByUsername = function(req, res, next, username) {
 };
 
 exports.addUserTags = function(req, res) {
-    var tags = req.body.tags.split(",");
-    for (var i in tags) {
-        req.user.tags.addToSet(tags[i]);
-    };
-    req.user.save(function(err) {
-        if (err) {
-            res.send("添加用户级tag失败!请向开发者报告此消息。谢谢支持。");
-        } else {
-            //res.send('更新数据成功!');
-            res.send('添加用户级tag成功，<a href="https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">点击返回</a>');
+        var tags = req.body.tags.split(",");
+        for (var i in tags) {
+            req.user.tags.addToSet(tags[i]);
         };
-    });
-}
-/*exports.addTagToRepos = function(req, res) {
-    // console.log(req.body._ids);
-    console.log(req.body);
-    var _ids = req.body._ids,
-        tag = req.body.tag;
-    for (var i in _ids) {
-        //console.log(_ids[i]);
-        User.update({
-            "repositories._id": _ids[i]
-        }, {
-            $addToSet: {
-                "repositories.$.tags": tag
-            }
-        }, function(err, result) {});
-    };
-    res.send(req.body._ids);
-}*/
+        req.user.save(function(err) {
+            if (err) {
+                res.send("添加用户级tag失败!请向开发者报告此消息。谢谢支持。");
+            } else {
+                //res.send('更新数据成功!');
+                res.send('<meta http-equiv="refresh" content="1;url=https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">添加用户级tag成功，3秒后将跳转回首页，或点击链接<a href="https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">返回首页</a>');
+            };
+        });
+    }
+    /*exports.addTagToRepos = function(req, res) {
+        // console.log(req.body._ids);
+        console.log(req.body);
+        var _ids = req.body._ids,
+            tag = req.body.tag;
+        for (var i in _ids) {
+            //console.log(_ids[i]);
+            User.update({
+                "repositories._id": _ids[i]
+            }, {
+                $addToSet: {
+                    "repositories.$.tags": tag
+                }
+            }, function(err, result) {});
+        };
+        res.send(req.body._ids);
+    }*/
 exports.addRemarkAndTag = function(req, res) {
     for (var _id in req.body) {
         //console.log(_id);
@@ -122,7 +122,7 @@ exports.addRemarkAndTag = function(req, res) {
             };
         };
     }
-    res.redirect('/');
+    res.send('<meta http-equiv="refresh" content="1;url=https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">添加tag及remark成功，3秒后将跳转回首页，或点击链接<a href="https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">返回首页</a>');
     //res.send(req.body);
 }
 
@@ -165,7 +165,7 @@ exports.LinkToGithub = function(req, accessToken, done) {
                 profile = JSON.parse(profile);
                 profile.username = profile.login;
                 profile.user_name = 'user/' + profile.login;
-                profile.addRemarkAndTag = 'user/' + profile.login+'/addRemarkAndTag';
+                profile.addRemarkAndTag = 'user/' + profile.login + '/addRemarkAndTag';
                 profile._id = profile.id;
                 profile.accessToken = accessToken;
                 done(null, profile);
