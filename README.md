@@ -37,13 +37,13 @@ GithubStarManage将各项属性以及操作深度整合，实现了一张表展�
 
 ###5分钟部署
 
-+.安装Nodejs，安装并运行MongoDB
-+.clone本项目，在根目录下运行npm install
-+.运行sudo npm install -g bower
-+.运行bower install
-+.在https://github.com/settings/developers 页面新建一个开发应用，记录key值，并参考本项目配置文件填写回调地址
-+.将key值填入development.js文件中
-+.node server.js
++ .安装Nodejs，安装并运行MongoDB
++ .clone本项目，在根目录下运行npm install
++ .运行sudo npm install -g bower
++ .运行bower install
++ .在https://github.com/settings/developers 页面新建一个开发应用，记录key值，并参考本项目配置文件填写回调地址
++ .将key值填入development.js文件中
++ .node server.js
 
 即可在浏览器中访问'http://127.0.0.1:3000' 打开本应用。
 
