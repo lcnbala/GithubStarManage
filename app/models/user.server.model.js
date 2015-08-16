@@ -9,6 +9,7 @@ var UserSchema = new Schema({
         required: true
     },
     user_name:String,
+    updateStarred:String,
     addRemarkAndTag:String,
     accessToken: String,
     email: {

@@ -7,6 +7,7 @@
     background-color: rgba(255, 247, 235, 0.87);
 }
 </style>
+<!-- <h4 style="color:red;">你看到这句话是因为我!现在!正在给本项目测试新的版本，因为受Github回调地址限制，所有的测试我只能在生产环境中进行，为配合我上线新功能，请不要对红色字体标识的项目进行点击、提交等操作，谢谢配合！因为涉及服务器的多次重启，由此对你可能造成的影响是需要多次登录，造成不便，请谅解，谢谢！</h4> -->
 <section ng-controller="ExampleController">
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">
@@ -25,8 +26,7 @@
                     <p>本系统实现了对GithubStar过的项目的搜索/添加tags/添加个性化描述等功能来加强对Star功能的利用。</p>
                     <p>总体设计易于上手，而为了信息聚合以及设计简洁的需要，我把所有功能整合到了下面这一个表格中，所以有必要对某些功能提供一个说明</p>
                     <hr>
-                    <p>先来介绍一下标签系统吧，首先是用户级标签（或全局标签），用户级标签是一个标签集，也就是你所有的项目的标签都是用户级标签的子集。如果你想给一个项目添加标签，那么首先要保证这个标签也在全局表签中，至于为什么这么做，一方面是避免误操作添加了错误的标签，alpha版本暂未添加删除标签的功能。另一方面原因会在下面解释。</p>
-                    <p>因为使用Nodejs以及Angularjs完全实现了前后端分离，添加用户级标签后需要重新从后端数据库更新一下前台的数据，所以在添加用户级标签后需要手动点击“刷新用户级标签”</p>
+                    <p>先来介绍一下标签系统吧，首先是用户级标签（或全局标签），用户级标签是一个标签集，也就是你所有的项目的标签都是用户级标签的子集。如果你想给一个项目添加标签，那么首先要保证这个标签也在全局表签中，这么做是为了避免误操作添加了错误的标签，alpha版本暂未添加删除标签的功能。</p>
                     <hr>
                     <p>批量给repos添加标签：每次只能添加一个标签，首先从用户级标签的列表中选择你想要添加的tag，然后从下面的表格中选中想要加到的repo中，支持同时向多个repos中添加标签。确认添加的按钮在表格最下方</p>
                     <hr>
@@ -37,14 +37,27 @@
                     <p>排序：点击列名，可以对相应列按升降序以及无序进行排序。</p>
                     <hr>
                     <p>项目还有很多需要优化的地方，欢迎提issue报bug以及建议。谢谢支持~</p>
+                    <p style="color:red;">本项目还处于测试与开发阶段，版本迭代迅速，我将#尽我最大可能#进行不删档维护，若因版本更新造成了您在我服务器上的数据丢失，你可以单独联系我进行手动恢复，每次重大改动前我均会备份数据库，另外本项目数据的导出导入功能已经纳入开发范围，敬请期待....</p>
                 </div>
             </div>
         </div>
     </div>
+    <div class="col-md-12">
+        <form enctype='application/json' action="{{user.updateStarred}}" method="post">
+            <p style="">从github更新数据</p>
+            <select name="page" class="form-control">
+                <option value="1">1-100</option>
+                <option value="2">101-200</option>
+                <option value="3">201-300</option>
+                <option value="4">301-400</option>
+                <option value="5">401-500</option>
+            </select>
+            <input type="submit" class="btn btn-default">
+        </form>
+    </div>
     <div class="col-md-2">
         <p>用户级标签列表：</p>
         <p ng-bind="{{user.tags}}"></p>
-        <a href="https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">刷新用户级标签</a>
     </div>
     <div class="col-md-4">
         <form enctype='application/json' action="{{user.user_name}}" method="post">

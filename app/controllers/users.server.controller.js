@@ -64,36 +64,49 @@ exports.userByUsername = function(req, res, next, username) {
 };
 
 exports.addUserTags = function(req, res) {
-        var tags = req.body.tags.split(",");
-        for (var i in tags) {
-            req.user.tags.addToSet(tags[i]);
+    var tags = req.body.tags.split(",");
+    for (var i in tags) {
+        req.user.tags.addToSet(tags[i]);
+    };
+    req.user.save(function(err) {
+        if (err) {
+            res.send("添加用户级tag失败!请向开发者报告此消息。谢谢支持。");
+        } else {
+            //res.send('更新数据成功!');
+            res.send('<meta http-equiv="refresh" content="1;url=https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">添加用户级tag成功，3秒后将跳转回首页，或点击链接<a href="https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">返回首页</a>');
         };
-        req.user.save(function(err) {
-            if (err) {
-                res.send("添加用户级tag失败!请向开发者报告此消息。谢谢支持。");
-            } else {
-                //res.send('更新数据成功!');
-                res.send('<meta http-equiv="refresh" content="1;url=https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">添加用户级tag成功，3秒后将跳转回首页，或点击链接<a href="https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">返回首页</a>');
+    });
+};
+
+//<meta http-equiv="refresh" content="1;url=https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">
+exports.updateStarred = function(req, res) {
+    if (req.body.page) {
+        console.time('series');
+        request({
+            url: 'https://api.github.com/users/' + req.user.username + '/starred?per_page=100&page=' + req.body.page,
+            headers: {
+                'User-Agent': 'Mozilla/5.0'
+            }
+        }, function(error, response, repos) {
+            console.timeEnd('series');
+            console.time('series1');
+            repos = JSON.parse(repos);
+            for (var i in repos) {
+                req.user.repositories.addToSet(repos[i]);
             };
+            req.user.save(function(err) {
+                if (err) {
+                    res.send("更新数据失败!");
+                } else {
+                    res.send('<meta http-equiv="refresh" content="1;url=https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">更新数据成功!3秒后将跳转回首页，或点击链接<a href="https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">返回首页</a>');
+                    //res.redirect('/');
+                };
+                console.timeEnd('series1');
+            });
+
         });
-    }
-    /*exports.addTagToRepos = function(req, res) {
-        // console.log(req.body._ids);
-        console.log(req.body);
-        var _ids = req.body._ids,
-            tag = req.body.tag;
-        for (var i in _ids) {
-            //console.log(_ids[i]);
-            User.update({
-                "repositories._id": _ids[i]
-            }, {
-                $addToSet: {
-                    "repositories.$.tags": tag
-                }
-            }, function(err, result) {});
-        };
-        res.send(req.body._ids);
-    }*/
+    };
+};
 exports.addRemarkAndTag = function(req, res) {
     for (var _id in req.body) {
         //console.log(_id);
@@ -111,7 +124,6 @@ exports.addRemarkAndTag = function(req, res) {
             var _ids = req.body._ids,
                 tag = req.body.tag;
             for (var i in _ids) {
-                //console.log(_ids[i]);
                 User.update({
                     "repositories._id": _ids[i]
                 }, {
@@ -123,28 +135,7 @@ exports.addRemarkAndTag = function(req, res) {
         };
     }
     res.send('<meta http-equiv="refresh" content="1;url=https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">添加tag及remark成功，3秒后将跳转回首页，或点击链接<a href="https://github.com/login/oauth/authorize?client_id=4c4ff12d4ea2e9212252&scope=repo">返回首页</a>');
-    //res.send(req.body);
-}
-
-/*
-exports.update = function(req, res, next) {
-    User.findByIdAndUpdate(req.user._id, req.body, function(err, user) {
-        if (err) {
-            return next(err);
-        } else {
-            res.json(user);
-        }
-    });
 };
-exports.delete = function(req, res, next) {
-    req.user.remove(function(err) {
-        if (err) {
-            return next(err);
-        } else {
-            res.json(req.user);
-        }
-    })
-};*/
 exports.requiresLogin = function(req, res, next) {
     if (!req.user) {
         return res.status(401).send({
@@ -165,7 +156,8 @@ exports.LinkToGithub = function(req, accessToken, done) {
                 profile = JSON.parse(profile);
                 profile.username = profile.login;
                 profile.user_name = 'user/' + profile.login;
-                profile.addRemarkAndTag = 'user/' + profile.login + '/addRemarkAndTag';
+                profile.updateStarred = 'user/' + profile.login + '/updateStarred';
+                //profile.addRemarkAndTag = 'user/' + profile.login + '/addRemarkAndTag';
                 profile._id = profile.id;
                 profile.accessToken = accessToken;
                 done(null, profile);
@@ -179,21 +171,20 @@ exports.LinkToGithub = function(req, accessToken, done) {
                 }
             }, function(error, response, repositories) {
                 repositories = JSON.parse(repositories);
-                for (i in repositories) {
-                    //repositories[i]._id = repositories[i].id;
-                    delete repositories[i].owner.url;
-                    delete repositories[i].owner.gravatar_id;
-                    delete repositories[i].owner.followers_url;
-                    delete repositories[i].owner.following_url;
-                    delete repositories[i].owner.gists_url;
-                    delete repositories[i].owner.starred_url;
-                    delete repositories[i].owner.subscriptions_url;
-                    delete repositories[i].owner.organizations_url;
-                    delete repositories[i].owner.repos_url;
-                    delete repositories[i].owner.events_url;
-                    delete repositories[i].owner.received_events_url;
-                    delete repositories[i].owner.site_admin;
-                }
+                // for (i in repositories) {
+                //     delete repositories[i].owner.url;
+                //     delete repositories[i].owner.gravatar_id;
+                //     delete repositories[i].owner.followers_url;
+                //     delete repositories[i].owner.following_url;
+                //     delete repositories[i].owner.gists_url;
+                //     delete repositories[i].owner.starred_url;
+                //     delete repositories[i].owner.subscriptions_url;
+                //     delete repositories[i].owner.organizations_url;
+                //     delete repositories[i].owner.repos_url;
+                //     delete repositories[i].owner.events_url;
+                //     delete repositories[i].owner.received_events_url;
+                //     delete repositories[i].owner.site_admin;
+                // };
                 profile.repositories = repositories;
                 done(null, profile);
             });
@@ -234,31 +225,4 @@ exports.LinkToGithub = function(req, accessToken, done) {
     })
 
 };
-exports.updateStarred = function(req, res) {
-    console.time('series');
-    request({
-        url: 'https://api.github.com/users/' + req.user.username + '/starred?per_page=100',
-        headers: {
-            'User-Agent': 'Mozilla/5.0'
-        }
-    }, function(error, response, repos) {
-        console.timeEnd('series');
-        console.time('series1');
-        repos = JSON.parse(repos);
-        for (var i in repos) {
-            //repos[i]._id = repos[i].id;
-            //delete repos[i].id;
-            req.user.repositories.addToSet(repos[i]);
-        };
-        req.user.save(function(err) {
-            if (err) {
-                res.send("更新数据失败!");
-            } else {
-                //res.send('更新数据成功!');
-                res.redirect('/');
-            };
-            console.timeEnd('series1');
-        });
 
-    });
-};

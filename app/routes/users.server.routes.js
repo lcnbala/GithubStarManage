@@ -18,15 +18,13 @@ module.exports = function(app) {
     app.route('/user/:userId')
         .post(users.addUserTags)
         .get(users.requiresLogin, users.read);
-    // app.route('/user/:userId/addTagToRepos')
-    //     .post(users.addTagToRepos);
     app.route('/user/:userId/addRemarkAndTag')
         .post(users.addRemarkAndTag);
     app.route('/user/:userId/starred')
         .get(users.requiresLogin, users.listStarred);
     app.route('/user/:userId/listUserTags')
         .get(users.requiresLogin, users.listUserTags);
-    app.route('/user/:userId/updatestarred')
-        .get(users.requiresLogin, users.updateStarred);
+    app.route('/user/:userId/updateStarred')
+        .post(users.requiresLogin, users.updateStarred);
     app.param('userId', users.userByUsername);
 };
