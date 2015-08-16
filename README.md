@@ -35,6 +35,21 @@ GithubStarManage将各项属性以及操作深度整合，实现了一张表展�
 
 本项目代码在GPL协议下开源，项目代码托管在Github。欢迎贡献代码、提交Bug以及issue。如果觉得项目不错，请Star。
 
+###5分钟部署
+
++ .安装Nodejs，安装并运行MongoDB
++ .clone本项目，在根目录下运行npm install
++ .运行sudo npm install -g bower
++ .运行bower install
++ .在https://github.com/settings/developers 页面新建一个开发应用，记录key值，并参考本项目配置文件填写回调地址
++ .将key值填入development.js文件中
++ .node server.js
+
+即可在浏览器中访问'http://127.0.0.1:3000' 打开本应用。
+
+####本项目给出的线上地址供演示用，因自用需要，版本迭代迅速，不对其中数据保证可用性，数据的导入导出功能仍在开发中。
+
+
 ###求职
 
 求互联网公司技术岗位，接受全栈，倾向于后端，线上简历在 http://golmic.deercv.com 简历是几个月之前写的，还未更新，可以马上入职，联系方式均有效，欢迎HR联系面试。
