@@ -52,7 +52,7 @@ GithubStarManage将各项属性以及操作深度整合，实现了一张表展�
 
 ### 求职
 
-求互联网公司技术岗位，接受全栈，倾向于后端，线上简历在 http://golmic.deercv.com 简历是几个月之前写的，还未更新，联系方式均有效，欢迎HR联系面试。
+求互联网公司技术岗位，接受全栈，倾向于后端，线上简历在 http://golmic.deercv.com 可以马上入职，欢迎HR联系面试。
 
 [image-1]:	http://ww2.sinaimg.cn/large/a41f74cdjw1euof5qt7b6j211y0lcn01.jpg
 [image-2]:	http://ww3.sinaimg.cn/large/a41f74cdjw1euof6bmn00j20xq0hin21.jpg
